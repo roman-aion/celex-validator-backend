@@ -7,7 +7,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080", "https://*.netlify.app"],
+    allow_origins=["http://localhost:8080", "https://catdc.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -214,4 +214,5 @@ def find_celex_by_ecli(ecli: str = Query(..., min_length=10, max_length=50)):
         "celex": None, 
         "title": None,
         "ecli": ecli
+
     })
